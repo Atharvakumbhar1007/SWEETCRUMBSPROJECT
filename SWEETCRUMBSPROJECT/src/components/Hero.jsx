@@ -1,10 +1,15 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
+import heroImage from "../assets/images/hero.jpg";
 
 function Hero() {
   return (
-    <section className="hero">
-
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(${heroImage})`,
+      }}
+    >
       <div className="hero-content">
 
         <h1>Welcome to Sweet Crumbs</h1>

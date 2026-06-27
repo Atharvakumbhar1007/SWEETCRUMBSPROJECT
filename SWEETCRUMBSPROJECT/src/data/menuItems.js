@@ -1,3 +1,15 @@
+import chocolateCake from "../assets/images/Chocolate-cake.jpg";
+import vanillaCake from "../assets/images/Vanilla-cake.jpg";
+import redVelvet from "../assets/images/Red-velvet.jpg";
+import chocolatePastry from "../assets/images/chocolate-pastry.jpg";
+import strawberryPastry from "../assets/images/strawberry-pastry.jpg";
+import blackForest from "../assets/images/black-forest.jpg";
+import garlicBread from "../assets/images/garlic-bread.jpg";
+import brownBread from "../assets/images/brown-bread.jpg";
+import cheeseBread from "../assets/images/cheese-bread.jpg";
+import coldCoffee from "../assets/images/cold-coffee.jpg";
+import hotCoffee from "../assets/images/hot-coffee.jpg";
+import freshJuice from "../assets/images/fresh-juice.jpg";
 export const menuItems = [
 {
 id:1,
