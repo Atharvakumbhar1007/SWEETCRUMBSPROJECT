@@ -1,0 +1,21 @@
+.menu-page{
+
+padding:40px 8%;
+
+}
+
+.menu-page h1{
+
+text-align:center;
+color:#8B4513;
+margin-bottom:20px;
+
+}
+
+.menu-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}

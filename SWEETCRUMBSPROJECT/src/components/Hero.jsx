@@ -1,26 +1,29 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import "./Hero.css";
+import { Link } from "react-router-dom";
 
-function Home() {
+function Hero() {
   return (
-    <>
-      <Navbar />
+    <section className="hero">
 
-      <h1>Sweet Crumbs Bakery</h1>
+      <div className="hero-content">
 
-      <h3>Freshly baked with love</h3>
+        <h1>Welcome to Sweet Crumbs</h1>
 
-      <h2>Featured Items</h2>
+        <p>
+          Fresh Cakes, Pastries, Breads and Drinks
+          made with love every single day.
+        </p>
 
-      <div>
-        <p>Chocolate Cake</p>
-        <p>Croissant</p>
-        <p>Cold Coffee</p>
+        <Link to="/menu">
+          <button className="hero-btn">
+            Explore Menu
+          </button>
+        </Link>
+
       </div>
 
-      <Footer />
-    </>
+    </section>
   );
 }
 
-export default Home;
+export default Hero;

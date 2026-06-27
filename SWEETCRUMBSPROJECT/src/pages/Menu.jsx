@@ -1,34 +1,49 @@
-const [items,setItems] = useState([]);
+import { useEffect, useState } from "react";
+import menuItems from "../data/menuItems";
+import MenuCard from "../components/MenuCard";
+import CategoryFilter from "../components/CategoryFilter";
+import "./Menu.css";
 
-const [filter,setFilter] = useState("All");
+function Menu({ addToOrder }) {
 
-useEffect(()=>{
- setItems(menuItems);
-},[]);
+  const [items, setItems] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("All");
 
-const filteredItems =
-filter==="All"
-? items
-: items.filter(
-item=>item.category===filter
-);
+  useEffect(() => {
+    setItems(menuItems);
+  }, []);
 
-<button onClick={()=>setFilter("All")}>
-All
-</button>
+  const filteredItems =
+    activeCategory === "All"
+      ? items
+      : items.filter(
+          (item) => item.category === activeCategory
+        );
 
-<button onClick={()=>setFilter("Cakes")}>
-Cakes
-</button>
+  return (
+    <div className="menu-page">
 
-<button onClick={()=>setFilter("Pastries")}>
-Pastries
-</button>
+      <h1>Our Menu</h1>
 
-<button onClick={()=>setFilter("Breads")}>
-Breads
-</button>
+      <CategoryFilter
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
 
-<button onClick={()=>setFilter("Drinks")}>
-Drinks
-</button>
+      <div className="menu-grid">
+
+        {filteredItems.map((item) => (
+          <MenuCard
+            key={item.id}
+            item={item}
+            addToOrder={addToOrder}
+          />
+        ))}
+
+      </div>
+
+    </div>
+  );
+}
+
+export default Menu;
