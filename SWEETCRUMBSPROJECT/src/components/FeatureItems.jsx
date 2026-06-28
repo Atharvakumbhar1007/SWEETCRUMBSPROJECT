@@ -1,3 +1,5 @@
+import FeaturedItems from "./components/FeaturedItems";
+
 import "./FeaturedItems.css";
 
 function FeaturedItems() {
